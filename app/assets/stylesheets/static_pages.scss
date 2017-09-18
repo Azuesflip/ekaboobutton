@@ -4,10 +4,10 @@
 div{
 	.home {
 		background-image: url(home_page_ebb.jpeg);
-		height: 100%;
-		background-size: 42%;
 		background-repeat: no-repeat;
-		background-position: top;
+		background-size: contain;
+		background-position: center;
 		background-color: black;
+		height: 100%;
 	}
 }
