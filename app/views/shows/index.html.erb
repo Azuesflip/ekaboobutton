@@ -22,7 +22,11 @@
         <td><%= show.state %></td>
         <td><%= show.venue %></td>
         <td><%= show.date %></td>
-        <td><%= show.tickets %></td>
+        <td><%= 
+          if(show.tickets != "")
+            link_to 'Tickets', show.tickets
+          end 
+        %></td>
         <td><%= link_to 'Show', show %></td>
         <td><%= link_to 'Edit', edit_show_path(show) %></td>
         <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
