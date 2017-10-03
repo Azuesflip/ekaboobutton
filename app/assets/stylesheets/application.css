@@ -24,13 +24,12 @@ body {
 
 .container {
 	height: 85%;
-	margin-top: -17px;
 }
 
 .head {
 	width: 100%;
 	background-color: teal;
-	height: 70px;
+	height: 53px;
 }
 
 .menu-bar {
