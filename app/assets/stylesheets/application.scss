@@ -22,8 +22,31 @@ body {
 	padding: 0;
 }
 
+.tickets{
+	a {
+		background-color: blue !important;
+		color: white !important;
+	}
+}
+
 .container {
 	height: 85%;
+	table {
+		tbody {
+			tr {
+				td {
+					a {
+						background-color: black;
+						color: lightgray;
+						text-decoration: none;
+						padding: 4px;
+						text-align: center;
+						margin: -5px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .head {
@@ -35,19 +58,17 @@ body {
 .menu-bar {
 	float: left;
 	margin: 17px;
-}
-
-.menu-bar a {
-	color: white;
-	text-decoration: none;
-	padding: 18px;
-	font-weight: bold;
-}
-
-.menu-bar a:hover {
-	color: black;
-	text-decoration: none;
-	background-color: white;
+	a {
+		color: white;
+		text-decoration: none;
+		padding: 18px;
+		font-weight: bold;
+	}
+	a:hover {
+		color: black;
+		text-decoration: none;
+		background-color: white;
+	}
 }
 
 #logo {
@@ -67,17 +88,15 @@ body {
 .right {
 	float: right;
 	margin: 17px;
-}
-
-.right a {
-	color: white;
-	text-decoration: none;
-	padding: 18px;
-	font-weight: bold;
-}
-
-.right a:hover {
-	color: black;
-	text-decoration: none;
-	background-color: white;
+	a {
+		color: white;
+		text-decoration: none;
+		padding: 18px;
+		font-weight: bold;
+	}
+	a:hover {
+		color: black;
+		text-decoration: none;
+		background-color: white;
+	}
 }
