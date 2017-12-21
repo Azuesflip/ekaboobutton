@@ -22,6 +22,42 @@ body {
 	padding: 0;
 }
 
+div{
+	.home {
+		background-image: url(home_page_ebb.jpeg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-color: black;
+		height: 100%;
+		.recomendations {
+			float: right;
+		}
+		.home-links {
+			float: left;
+			width: 53%;
+			ul {
+				li {
+					list-style-type: none;
+					margin: 11%;
+					a {
+						float: center;
+						text-align: center;
+						text-decoration: none;
+						color: white;
+						font-size: 30px;
+						font-family: verdana;
+						font-variant: all-petite-caps;
+					}
+					a:hover {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
 .tickets{
 	a {
 		background-color: blue !important;
