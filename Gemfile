@@ -33,6 +33,9 @@ gem 'bcrypt', '~> 3.1.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'rails-controller-testing'
+
 gem 'carrierwave'
 gem 'cloudinary'
 
