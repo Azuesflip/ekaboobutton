@@ -129,7 +129,7 @@ div{
 			ul {
 				li {
 					list-style-type: none;
-					margin: 11%;
+					margin: 16%;
 					a {
 						float: center;
 						text-align: center;
@@ -148,37 +148,15 @@ div{
 	}
 }
 
-.tickets{
-	a {
-		background-color: blue !important;
-		color: white !important;
-	}
-}
-
-.container {
-	height: 85%;
-	table {
-		tbody {
-			tr {
-				td {
-					a {
-						background-color: black;
-						color: lightgray;
-						text-decoration: none;
-						padding: 4px;
-						text-align: center;
-						margin: -5px;
-					}
-				}
-			}
-		}
-	}
+#container {
+	height: 89%;
+	width: 100%;
 }
 
 .head {
 	width: 100%;
 	background-color: teal;
-	height: 53px;
+	height: 55px;
 }
 
 .menu-bar {

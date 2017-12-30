@@ -20,9 +20,9 @@
         <td><%= blog.title %></td>
         <td><%= blog.body %></td>
         <td><%= blog.date %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', blog, class:'btn btn-secondary' %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog), class:'btn btn-secondary' %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-secondary' %></td>
       </tr>
     <% end %>
   </tbody>
