@@ -28,8 +28,10 @@
           end 
         %></td>
         <td><%= link_to 'Show', show, class:'btn btn-secondary' %></td>
-        <td><%= link_to 'Edit', edit_show_path(show), class:'btn btn-secondary' %></td>
-        <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-secondary' %></td>
+        <% if logged_in? %>
+          <td><%= link_to 'Edit', edit_show_path(show), class:'btn btn-secondary' %></td>
+          <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-secondary' %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

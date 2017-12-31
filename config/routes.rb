@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get    '/404',   to: 'public#404'
+
 
   resources :admins
   resources :shows

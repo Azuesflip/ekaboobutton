@@ -21,8 +21,10 @@
         <td><%= blog.body %></td>
         <td><%= blog.date %></td>
         <td><%= link_to 'Show', blog, class:'btn btn-secondary' %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog), class:'btn btn-secondary' %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-secondary' %></td>
+        <% if logged_in? %>
+          <td><%= link_to 'Edit', edit_blog_path(blog), class:'btn btn-secondary' %></td>
+          <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-secondary' %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
