@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :apparels
+  resources :performances
   get 'sessions/new'
 
   get 'admins/new'

@@ -18,7 +18,7 @@
     <% @blogs.reverse.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
+        <td><%= blog.body.truncate_words(25) %></td>
         <td><%= blog.date %></td>
         <td><%= link_to 'Show', blog, class:'btn btn-secondary' %></td>
         <% if logged_in? %>
