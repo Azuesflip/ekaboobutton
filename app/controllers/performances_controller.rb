@@ -1,5 +1,5 @@
 class PerformancesController < ApplicationController
-  before_action :set_performance, only: [:show, :edit, :update, :destroy]
+  before_action :set_performance, only: [:show, :edit, :update, :destroy, :show_photo]
 
   # GET /performances
   # GET /performances.json
@@ -12,13 +12,19 @@ class PerformancesController < ApplicationController
   def show
   end
 
+  def show_photo
+    @photo = Photo.find(params[:photo_id])
+  end
+
   # GET /performances/new
   def new
     @performance = Performance.new
+    @direct_mode = params[:direct_mode]
   end
 
   # GET /performances/1/edit
   def edit
+    @direct_mode = params[:direct_mode]
   end
 
   # POST /performances
@@ -28,6 +34,7 @@ class PerformancesController < ApplicationController
 
     respond_to do |format|
       if @performance.save
+        store_photos
         format.html { redirect_to @performance, notice: 'Performance was successfully created.' }
         format.json { render :show, status: :created, location: @performance }
       else
@@ -42,6 +49,8 @@ class PerformancesController < ApplicationController
   def update
     respond_to do |format|
       if @performance.update(performance_params)
+        delete_photos
+        store_photos
         format.html { redirect_to @performance, notice: 'Performance was successfully updated.' }
         format.json { render :show, status: :ok, location: @performance }
       else
@@ -70,5 +79,16 @@ class PerformancesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def performance_params
       params.require(:performance).permit(:title, :body, :date, :location)
+    end
+
+     def store_photos
+      photos = params[:performance][:photos]
+      photos.each{|photo| @performance.photos.create(image: photo)} if photos
+    end
+
+    def delete_photos
+      @performance.photos.each do |photo|
+        photo.destroy if params[photo.id.to_s] == "delete"
+      end
     end
 end
